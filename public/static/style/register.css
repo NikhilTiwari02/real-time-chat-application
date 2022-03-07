@@ -1,0 +1,17 @@
+.contain{
+    height: 100%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sec{
+    padding: 40px;
+    border: 2px solid rgba(23, 111, 226, 0.945);
+    border-radius: 10px;
+}
+h3{
+    color: white;
+}

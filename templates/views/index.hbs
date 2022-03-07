@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+let s="Hello there! Welcome to chat app";
+let text=''
+let a=Array.from(s)
+console.log(a);
+let i=0
+const t=setInterval(() => {
+     text=text+a[i];
+     document.getElementById('msg').innerHTML=text+'|';
+     i++;
+     if(i==s.length){
+         document.getElementById('msg').innerHTML=text;
+         text='';
+      clearInterval(t);}  
+}, 100);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+</head>
+<body>
+    {{>navbar}}
+    <div class="main">
+        <div class="icon">
+              <img src="../chat.png" alt="icon" class="iconimg">
+        </div>
+        <div class="para">
+             <p id="msg"></p>
+        </div>
+        <div class="buttons">
+        <a type="button" id="signup" class="btn btn-outline-success" href="/register">sign up >></a>
+         <a type="button" id="login" class="btn btn-outline-primary" href="/login">login >></a>
+        </div>
+    </div>
+        <h2 id="contact">Contact us</h2>
+    <div class="container contactform">
+    <form action="" >
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email address">
+  </div>
+  <div class="form-group py-3">
+    <input class="form-control" type="text" placeholder="Full name">
+  </div class="container">
+  <div class="form-group" >
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter mobile number ">
+  </div>
+  <div class="form-group py-3">
+    {{!-- <label for="exampleFormControlTextarea1">Example textarea</label> --}}
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Enter your text here"></textarea>
+    <button type="button" id="submit" class="btn btn-outline-success" href="/">submit</button>
+  </div>
+</form>
+</div>
+
+</body>
+</html>
